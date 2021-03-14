@@ -25,11 +25,10 @@ const datasource = {
 Procedural.init( { container, datasource } );
 
 // Configure buttons for UI
-Procedural.setCameraModeControlVisible( true );
-Procedural.setCompassVisible( false );
-Procedural.setRotationControlVisible( true );
-Procedural.setZoomControlVisible( true );
-
+Procedural.setCameraModeControlVisible(true);
+Procedural.setCompassVisible(false);
+Procedural.setRotationControlVisible(true);
+Procedural.setZoomControlVisible(true);
 
 const configuration = {
   // Minimum distance camera can approach scene
@@ -114,3 +113,82 @@ function loadTrail(feature) {
     }))
   );
   Procedural.addOverlay(overlay);
+
+  // Fetch GPX file and populate UI
+  fetch(`gpx/${gpx}`)
+    .then((data) => data.text())
+    .then((xml) => {
+      console.log("load track");
+      const gpx = new gpxParser();
+      gpx.parse(xml);
+      const totalDistance = gpx.tracks[0].distance.total;
+      const geoJSON = gpx.toGeoJSON();
+
+      const bounds = gpx.tracks[0].bounds;
+      const latitude = (bounds.sw.latitude + bounds.ne.latitude) / 2;
+      const longitude = (bounds.sw.longitude + bounds.ne.longitude) / 2;
+      Procedural.displayLocation({ latitude, longitude });
+
+      const coords = geoJSON.features[0].geometry.coordinates;
+      const start_coords = coords[0];
+      const end_coords = coords[coords.length - 1];
+      const overlay = {
+        name: "track",
+        type: "FeatureCollection",
+        features: [
+          {
+            geometry: {
+              type: "LineString",
+              coordinates: coords.map((coord, i) => [coord[0], coord[1]]),
+            },
+            type: "Feature",
+            properties: {
+              color: "#f30e32",
+              thickness: 4,
+            },
+          },
+        ],
+      };
+      Procedural.addOverlay(overlay);
+
+      setTimeout(() => {
+        Procedural.focusOnBounds(gpx.tracks[0].bounds);
+        setTimeout(() => Procedural.orbitTarget(), 2000);
+      }, 1000);
+    });
+}
+
+// Show list when title clicked
+title.addEventListener("click", () => {
+  trailListOverlay.classList.remove("hidden");
+});
+
+// Fetch trail list and populate UI
+fetch("trails.geojson")
+  .then((data) => data.json())
+  .then((trails) => {
+    // Display first trail location
+    const [longitude, latitude] = trails.features[0].geometry.coordinates;
+    Procedural.displayLocation({ latitude, longitude });
+
+    trails.features.forEach((trail, i) => {
+      const li = document.createElement("li");
+      let p = document.createElement("p");
+      p.innerHTML = trail.properties.name;
+      li.appendChild(p);
+      p = document.createElement("p");
+      p.innerHTML = `${trail.properties.distance} km (${trail.properties.length})`;
+      li.appendChild(p);
+      li.style.backgroundImage = `url(images/${i % 4}.jpg)`;
+      trailList.appendChild(li);
+      li.addEventListener("click", () => loadTrail(trail));
+    });
+
+    // Load trail when marker clicked
+    Procedural.onFeatureClicked = (id) => {
+      const trail = trails.features[id];
+      if (trail) {
+        loadTrail(trail);
+      }
+    };
+  });
