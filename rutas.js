@@ -123,3 +123,23 @@ fetch( 'peaks.geojson' )
       if ( peak ) { loadPeak( peak ) }
     }
   } );
+
+const configuration = {
+  // Minimum distance camera can approach scene
+  minDistance: 100,
+  // Maximum distance camera can move from scene
+  maxDistance: 80000,
+  // Maximum distance camera target can move from scene
+  maxBounds: 7500000,
+  // Minimum polar angle of camera
+  minPolarAngle: 0.25 * Math.PI,
+  // Maximum polar angle of camera
+  maxPolarAngle: 0.8 * Math.PI,
+  // Set to true to disable panning
+  noPan: true,
+  // Set to true to disable rotating
+  noRotate: false,
+  // Set to true to disable zooming
+  noZoom: false,
+};
+Procedural.configureControls(configuration);
