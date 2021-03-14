@@ -115,7 +115,7 @@ fetch( 'peaks.geojson' )
         }
       } ) )
     }
-    Procedural.addOverlay( overlay );
+    //Procedural.addOverlay( overlay );
 
     // Move view to peak when marker clicked
     Procedural.onFeatureClicked = id => {
