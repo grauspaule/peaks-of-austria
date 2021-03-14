@@ -143,3 +143,67 @@ const configuration = {
   noZoom: false,
 };
 Procedural.configureControls(configuration);
+
+// Define function for loading a given trail
+function loadTrail(feature) {
+  const { name, distance, length, gpx, points } = feature.properties;
+  title.innerHTML = name;
+  subtitle.innerHTML = `${distance} km (${length})`;
+  trailListOverlay.classList.add("hidden");
+
+  let overlay = {
+    name: "trail",
+    type: "FeatureCollection",
+    features: [],
+  };
+  // Display point name
+  overlay.features.push(
+    ...points.map((point) => ({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: point.coordinates,
+      },
+      properties: {
+        name: `${point.name}`,
+        background: "rgba(35,46,50,1)",
+        borderRadius: 8,
+        fontSize: 18,
+        padding: 10,
+        anchorOffset: { y: 86, x: 0 },
+      },
+    }))
+  );
+  // Display |
+  overlay.features.push(
+    ...points.map((point) => ({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: point.coordinates,
+      },
+      properties: {
+        color: "rgba(255, 255, 255, 0.5)",
+        fontSize: 30,
+        name: "|",
+        anchorOffset: { y: 36, x: 0 },
+      },
+    }))
+  );
+  // Display point index
+  overlay.features.push(
+    ...points.map((point, i) => ({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: point.coordinates,
+      },
+      properties: {
+        name: i + 1,
+        background: "rgba(35,46,50,1)",
+        borderRadius: 8,
+        padding: 6,
+      },
+    }))
+  );
+  Procedural.addOverlay(overlay);
