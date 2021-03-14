@@ -39,7 +39,11 @@
             "name": "Mallnock",
             "coordinates": [13.7696, 46.8764]
           },
-                   {
+          {
+            "name": "Rosennock",
+            "coordinates": [13.7124, 46.8769]
+          },
+                             {
             "name": "Wiesennock",
             "coordinates": [13.74178, 46.83671]
           }
