@@ -68,7 +68,7 @@ function loadPeak( feature ) {
     ]
   }
 
-  Procedural.addOverlay( overlay );
+  //Procedural.addOverlay( overlay );
   setTimeout( () => Procedural.orbitTarget(), 1000 );
 }
 
