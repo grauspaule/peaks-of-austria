@@ -77,52 +77,9 @@ title.addEventListener( 'click', () => {
   peakListOverlay.classList.remove( 'hidden' );
 } );
 
-// Fetch peak list and populate UI
-fetch( 'peaks.geojson' )
-  .then( data => data.json() )
-  .then( peaks => {
-    // Display first peak
-    const [longitude, latitude] = peaks.features[ 0 ].geometry.coordinates;
-    Procedural.displayLocation( { latitude, longitude } );
 
-    peaks.features.forEach( (peak, i) => {
-      const li = document.createElement( 'li' );
-      let p = document.createElement( 'p' );
-      p.innerHTML = peak.properties.name;
-      li.appendChild( p );
-      p = document.createElement( 'p' );
-      p.innerHTML = i + 1;
-      li.appendChild( p );
-      // For now just have 10 preview images
-      li.style.backgroundImage = `url(images/${i % 10}.jpg)`;
-      peakList.appendChild( li );
-      li.addEventListener( 'click', () => loadPeak( peak ) );
-    } );
 
-    // Add overlay showing all peaks
-    const overlay = {
-      "name": "dots",
-      "type": "FeatureCollection",
-      "features": peaks.features.map( (feature, i) => ( {
-        "id": i,
-        "type": "Feature",
-        "geometry": feature.geometry,
-        "properties": {
-          "name": i + 1,
-          "background": "rgba(35,46,50,1)",
-          "borderRadius": 8,
-          "padding": 6,
-        }
-      } ) )
-    }
-    //Procedural.addOverlay( overlay );
 
-    // Move view to peak when marker clicked
-    Procedural.onFeatureClicked = id => {
-      const peak = peaks.features[ id ];
-      if ( peak ) { loadPeak( peak ) }
-    }
-  } );
 
 const configuration = {
   // Minimum distance camera can approach scene
