@@ -5,10 +5,10 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [6.865217791451906, 45.83321949365825]
+        "coordinates":  [13.61863372,47.05903505]
       },
       "properties": {
-        "name": "Le Tour du Mont Blanc",
+        "name": "XKnockOut",
         "code": "TMB",
         "distance": "170",
         "length": "7-10 days",
@@ -20,81 +20,10 @@
         "gpx": "tour_du_mont_blanc.gpx",
         "points": [
           {
-            "name": "Aiguille de Bionnassay",
-            "coordinates": [6.81900079467079, 45.837168488861025]
-          },
-          {
-            "name": "Dômes de Miage",
-            "coordinates": [6.800572330075051, 45.815693529154395]
-          },
-          {
-            "name": "Aiguille du Goûter",
-            "coordinates": [6.831320911032362, 45.851069554217354]
-          },
-          {
-            "name": "Aiguilles de la Penaz",
-            "coordinates": [6.699486911024293, 45.74500587881309]
-          },
-          {
-            "name": "Aiguille des Glaciers",
-            "coordinates": [6.802568753355134, 45.77872378033517]
-          },
-          {
-            "name": "Pyramides Calcaires",
-            "coordinates": [6.819874198899301, 45.7622869365314]
-          },
-          {
-            "name": "Mont Fortin",
-            "coordinates": [6.871716759934526, 45.76459790724845]
-          },
-          {
-            "name": "Aiguille de Tré la Tête",
-            "coordinates": [6.81521457240174, 45.794990913000625]
-          },
-          {
-            "name": "Mont Blanc",
-            "coordinates": [6.86530364171782, 45.832980533965824]
-          },
-          {
-            "name": "Aiguille Noire de Peuterey",
-            "coordinates": [6.893675368701334, 45.81535829756355]
-          },
-          {
-            "name": "Dent du Géant",
-            "coordinates": [6.952009757063493, 45.86253107925643]
-          },
-          {
-            "name": "Grandes Jorasses",
-            "coordinates": [6.988049568705449, 45.869139527600176]
-          },
-          {
-            "name": "Aiguille de la Brenva",
-            "coordinates": [6.917777816699568, 45.83490533206604]
-          },
-          {
-            "name": "Mont Dolent",
-            "coordinates": [7.044469614739828, 45.923094872895454]
-          },
-          {
-            "name": "Grand Combin",
-            "coordinates": [7.298985226382368, 45.937193343230824]
-          },
-          {
-            "name": "Aiguille de Triolet",
-            "coordinates": [7.02471406870914, 45.91724168408093]
-          },
-          {
-            "name": "Tour Noir",
-            "coordinates": [7.037608811039832, 45.94916431701662]
-          },
-          {
-            "name": "Aiguillette d'Argentière",
-            "coordinates": [6.912129741729411, 45.98521820118938]
-          },
-          {
-            "name": "Aiguille Verte",
-            "coordinates": [6.970058653367063, 45.935114061788646]
+            "name": "Katschberg",
+            "coordinates": [13.61863372,47.05903505]
           }
+          
         ]
       }
     }
