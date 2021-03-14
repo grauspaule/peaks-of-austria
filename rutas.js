@@ -30,56 +30,6 @@ Procedural.setCompassVisible( false );
 Procedural.setRotationControlVisible( true );
 Procedural.setZoomControlVisible( true );
 
-// Define function for loading a given peak
-function loadPeak( feature ) {
-  const { name, height } = feature.properties;
-  const [longitude, latitude] = feature.geometry.coordinates;
-  Procedural.displayLocation( { latitude, longitude } );
-  title.innerHTML = name;
-  subtitle.innerHTML = `${height}m`;
-  peakListOverlay.classList.add( 'hidden' );
-
-  const overlay = {
-    "name": "peak",
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "geometry": feature.geometry,
-        "properties": {
-          "name": `${name}`,
-          "background": "rgba(35,46,50,1)",
-          "borderRadius": 8,
-          "fontSize": 18,
-          "padding": 10,
-          "anchorOffset": { "y": 86, "x": 0 }
-        }
-      },
-      {
-        "type": "Feature",
-        "geometry": feature.geometry,
-        "properties": {
-          "color": "rgba(255, 255, 255, 0.5)",
-          "fontSize": 30,
-          "name": "|",
-          "anchorOffset": { "y": 36, "x": 0 }
-        }
-      }
-    ]
-  }
-
-  //Procedural.addOverlay( overlay );
-  setTimeout( () => Procedural.orbitTarget(), 1000 );
-}
-
-// Show list when title clicked
-title.addEventListener( 'click', () => {
-  peakListOverlay.classList.remove( 'hidden' );
-} );
-
-
-
-
 
 const configuration = {
   // Minimum distance camera can approach scene
