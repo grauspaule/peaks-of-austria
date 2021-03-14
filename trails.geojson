@@ -33,6 +33,32 @@
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates":  [13.953,46.5076]
+      },
+      "properties": {
+        "name": "Mittagskogel",
+        "code": "TMB",
+        "distance": "170",
+        "length": "7-10 days",
+        "elevation": {
+          "min": "-10.000",
+          "max": "+10.000"
+        },
+        "difficulty": "Moderate",
+        "gpx": "Mittagskogel.gpx",
+        "points": [
+          {
+            "name": "Mittagskogel",
+            "coordinates": [13.953,46.5076]
+          }
+        
+        ]
+      }
     }
       
     
