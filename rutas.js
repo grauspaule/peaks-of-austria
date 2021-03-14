@@ -1,7 +1,7 @@
 // Initialize the engine with a location and inject into page
 const container = document.getElementById( 'container' );
-const peakList = document.getElementById( 'peak-list' );
-const peakListOverlay = document.getElementById( 'peak-list-overlay' );
+const trailList = document.getElementById("trail-list");
+const trailListOverlay = document.getElementById("trail-list-overlay");
 const title = document.getElementById( 'title' );
 const subtitle = document.getElementById( 'subtitle' );
 
