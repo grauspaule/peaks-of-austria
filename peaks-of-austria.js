@@ -6,7 +6,7 @@ const title = document.getElementById( 'title' );
 const subtitle = document.getElementById( 'subtitle' );
 
 // Define API Keys (replace these with your own!)
-const NASADEM_APIKEY = 10bd2d792994c404583d7642a9dc8ffd7;
+const NASADEM_APIKEY = '10bd2d792994c404583d7642a9dc8ffd7';
 if ( !NASADEM_APIKEY ) {
   const error = Error( 'Modify index.html to include API keys' );
   container.innerHTML = error; 
