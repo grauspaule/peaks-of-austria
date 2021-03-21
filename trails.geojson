@@ -48,6 +48,54 @@
             "coordinates": [13.74178, 46.83671]
           }
         ]
+      },
+      {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates":  [13.61863372,47.05903505]
+      },
+      "properties": {
+        "name": "Grünnock",
+        "code": "Loco",
+        "distance": "54",
+        "length": "16h",
+        "elevation": {
+          "min": "-10.000",
+          "max": "+10.000"
+        },
+        "difficulty": "Moderate",
+        "gpx": "XKnockOut.gpx",
+        "points": [
+          {
+            "name": "Katschberg",
+            "coordinates": [13.61863372,47.05903505]
+          },
+          {
+            "name": "Aineck",
+            "coordinates": [13.6371,47.05553]
+          },
+          {
+            "name": "Grünleitennock",
+            "coordinates": [ 13.7507, 46.9548]
+          },
+          {
+            "name": "Königsstuhl",
+            "coordinates": [13.78458, 46.94385]
+          },
+          {
+            "name": "Mallnock",
+            "coordinates": [13.7696, 46.8764]
+          },
+          {
+            "name": "Rosennock",
+            "coordinates": [13.7124, 46.8769]
+          },
+                             {
+            "name": "Wiesennock",
+            "coordinates": [13.74178, 46.83671]
+          }
+        ]
       }
     }
       
