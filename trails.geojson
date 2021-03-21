@@ -54,7 +54,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates":  [13.61863372,47.05903505]
+        "coordinates":  [13.61934,46.61465]
       },
       "properties": {
         "name": "Grünnock",
@@ -69,16 +69,16 @@
         "gpx": "XKnockOut.gpx",
         "points": [
           {
-            "name": "Katschberg",
-            "coordinates": [13.61863372,47.05903505]
+            "name": "Dobrač",
+            "coordinates": [13.67038,46.60365]
           },
           {
-            "name": "Aineck",
-            "coordinates": [13.6371,47.05553]
+            "name": "Grünnock",
+            "coordinates": [13.66119,46.60944]
           },
           {
-            "name": "Grünleitennock",
-            "coordinates": [ 13.7507, 46.9548]
+            "name": "Kilzerberg",
+            "coordinates": [ 13.63493, 46.62044]
           },
           {
             "name": "Königsstuhl",
