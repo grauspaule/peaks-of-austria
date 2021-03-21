@@ -82,6 +82,39 @@
           }
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates":  [13.61934,46.61465]
+      },
+      "properties": {
+        "name": "Kilzerberg",
+        "code": "Loco",
+        "distance": " ",
+        "length": "",
+        "elevation": {
+          "min": "-10.000",
+          "max": "+10.000"
+        },
+        "difficulty": "Moderate",
+        "gpx": "Kilzerberg.gpx",
+        "points": [
+          {
+            "name": "Dobrač",
+            "coordinates": [13.67038,46.60365]
+          },
+          {
+            "name": "Grünnock",
+            "coordinates": [13.66119,46.60944]
+          },
+          {
+            "name": "Kilzerberg",
+            "coordinates": [ 13.63493, 46.62044]
+          }
+        ]
+      }
     }
       
     
