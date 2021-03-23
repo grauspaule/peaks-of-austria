@@ -59,8 +59,8 @@
       "properties": {
         "name": "Grünnock Transgresión",
         "code": "Loco",
-        "distance": " ",
-        "length": "",
+        "distance": "12",
+        "length": "3,5h",
         "elevation": {
           "min": "-10.000",
           "max": "+10.000"
@@ -90,10 +90,10 @@
         "coordinates":  [13.61934,46.61465]
       },
       "properties": {
-        "name": "Kilzerberg",
+        "name": "Herms- to Kilzerberg",
         "code": "Loco",
-        "distance": " ",
-        "length": "",
+        "distance": "14 ",
+        "length": "5h",
         "elevation": {
           "min": "-10.000",
           "max": "+10.000"
