@@ -1,9 +1,11 @@
-html, body {
+html,
+body {
   margin: 0;
   font-family: sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   position: absolute;
   z-index: 100;
   color: white;
@@ -34,7 +36,7 @@ h2 {
   color: #ccc;
 }
 
-#peak-list-overlay {
+#trail-list-overlay {
   background: #232e32;
   width: 100%;
   height: 100%;
@@ -45,17 +47,17 @@ h2 {
   transition: transform 0.5s ease-in-out;
 }
 
-@media (min-width: 800px) { 
-#peak-list-overlay {
-  width: 400px;
-}
+@media (min-width: 800px) {
+  #trail-list-overlay {
+    width: 400px;
+  }
 }
 
-#peak-list-overlay.hidden {
+#trail-list-overlay.hidden {
   transform: translateY(100%);
 }
 
-#peak-list-overlay h1 {
+#trail-list-overlay h1 {
   position: relative;
   width: 100%;
   text-align: right;
@@ -64,20 +66,20 @@ h2 {
   font-size: 28px;
 }
 
-#peak-list-overlay h2 {
+#trail-list-overlay h2 {
   position: absolute;
   font-size: 12px;
   top: 28px;
   right: 10px;
 }
 
-#peak-list {
+#trail-list {
   padding: 0;
   margin: 0;
   margin-top: 50px;
 }
 
-#peak-list li {
+#trail-list li {
   position: relative;
   color: white;
   cursor: pointer;
@@ -86,7 +88,7 @@ h2 {
   background-size: cover;
 }
 
-#peak-list p {
+#trail-list p {
   display: inline;
   line-height: 120px;
   font-size: 20px;
@@ -95,7 +97,7 @@ h2 {
   padding: 6px 10px 6px 40px;
 }
 
-#peak-list p:last-child {
+#trail-list p:last-child {
   position: absolute;
   top: 10px;
   right: 10px;
